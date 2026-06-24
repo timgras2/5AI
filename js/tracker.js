@@ -5,31 +5,31 @@
   if (!mount) return;
 
   const phases = [
-    { id: "p30", label: "Eerste 30 dagen", color: "var(--s1)", title: "Fundament leggen",
+    { id: "p30", label: "Eerste 30 dagen", color: "var(--s1)", title: "Ontdekken & selecteren",
       items: [
-        ["Kies één AI-assistent en gebruik die dagelijks", "ChatGPT, Claude of Gemini — pak er één en bouw routine op."],
-        ["Selecteer 1 repetitieve taak om te verbeteren", "Denk aan e-mails, samenvattingen of productteksten."],
-        ["Schrijf je eerste prompts met het RACE-framework", "Rol · Actie · Context · Einddoel."],
-        ["Documenteer wat wel en niet werkt", "Houd een simpel logje bij van je beste prompts."],
-        ["Maak een 'Project' of 'Agent' met vaste context", "Upload je tone-of-voice, voorbeelden en richtlijnen."]
+        ["Kies 3 kleine taken en probeer voor elk een andere AI-aanpak", "Houd simpel bij welke stijl per taak werkt."],
+        ["Houd 1 week een mini-logboek bij", "Noteer per dag: taak, aanpak en resultaat (1–10)."],
+        ["Maak 3 herbruikbare prompts van je beste logboek-notities", "Test elke prompt 2× en verfijn tot hij consistent oplevert."],
+        ["Vergelijk 2 verschillende promptstijlen voor dezelfde taak", "Welke geeft consistent het beste resultaat?"],
+        ["Kies op dag 30 jouw 1 meest veelbelovende use-case", "Weeg: kost het tijd? Complexiteit? Frequentie? Strategisch belang?"]
       ]
     },
-    { id: "p60", label: "Dag 30–60", color: "var(--s3)", title: "Uitbreiden & automatiseren",
+    { id: "p60", label: "Dag 30–60", color: "var(--s3)", title: "Verdiepen & meten",
       items: [
-        ["Bouw een AI-keten van 2–3 stappen", "Laat de output van stap 1 de input van stap 2 zijn."],
-        ["Doe de automatiseer-assessment op 3 taken", "Frequentie, complexiteit, risico en menselijk oordeel."],
-        ["Probeer een automatiseringstool (Zapier of Make)", "Koppel je AI aan e-mail, agenda of een spreadsheet."],
-        ["Betrek een collega en deel je beste workflow", "Adoptie groeit het snelst via concrete voorbeelden."],
-        ["Reserveer een vast wekelijks 'AI-uurtje'", "Experimenteren wordt pas waardevol als het routine is."]
+        ["Bouw een vaste werkstroom rond je gekozen taak", "Input → verwerking → controle → output, consistent herhaalbaar."],
+        ["Doe een voor- en nameting: 1 week zonder, 1 week met AI", "Wat is het verschil in tijd en kwaliteit?"],
+        ["Stel een vaste instructieset in", "Documenteer achtergrond, toon en voorbeelden voor consistente output."],
+        ["Experimenteer met 1 radicaal andere aanpak voor dezelfde taak", "Welke past beter bij jouw situatie en tijd?"],
+        ["Beslis: blijf je zelf doen, of wordt het tijd voor een andere route?", "Kost het >2 uur/week en blijf je hangen? Dan is specialist een optie."]
       ]
     },
-    { id: "p90", label: "Dag 60–90", color: "var(--s5)", title: "Bouwen & meten",
+    { id: "p90", label: "Dag 60–90", color: "var(--s5)", title: "Bewijzen & vooruitkijken",
       items: [
-        ["Bouw één simpele tool met vibecoding", "Lovable, Bolt of Claude artifacts — begin klein."],
-        ["Bepaal KPI's voor je belangrijkste use-case", "Tijdsbesparing, doorlooptijd, kwaliteit of klanttevredenheid."],
-        ["Meet de nulmeting vs. de situatie met AI", "Cijfers maken waarde zichtbaar en overtuigen anderen."],
-        ["Schrijf een mini-businesscase (1 A4)", "Probleem, oplossing, resultaat en vervolgstap."],
-        ["Kies je volgende use-case en herhaal de cyclus", "Verkennen → Uitbreiden → Automatiseren → Bouwen → Meten."]
+        ["Reken uit wat je AI-werkstroom oplevert", "Bespaarde uren × uurtarief of kwaliteitsverbetering op 1 A4."],
+        ["Automatiseer 1 handmatige stap in je werkstroom", "En controleer of de kwaliteit overeind blijft."],
+        ["Scan 2 nieuwe taken en beoordeel ze", "Tijd, complexiteit, risico — zelf doen, aannemen of specialist?"],
+        ["Plan 1 vast moment per maand (30 min) voor AI", "Test 1 nieuwe aanpak en evalueer je resultaten."],
+        ["Maak je plan voor de volgende 90 dagen", "Welke taken, in welke volgorde, en welke route per taak?"]
       ]
     }
   ];
