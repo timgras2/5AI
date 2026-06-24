@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('5ai-theme')||'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('5ai-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -19,7 +19,7 @@
     <nav class="nav-links">
       <a href="index.html">Overzicht</a>
       <a href="sessies.html">Sessies</a>
-      <a href="tools.html">Tools 2026</a>
+      <a href="tools.html">Tools</a>
       <a href="volgende-stappen.html">Volgende stappen</a>
     </nav>
     <div class="nav-tools">

@@ -2,16 +2,22 @@
 (function () {
   "use strict";
 
-  /* ---- Theme (dark-first, with toggle) ---- */
+  /* ---- Theme (system-first, with toggle) ---- */
   const root = document.documentElement;
   const stored = localStorage.getItem("5ai-theme");
-  root.setAttribute("data-theme", stored || "dark");
+  root.setAttribute("data-theme", stored || (window.matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light"));
 
   window.toggleTheme = function () {
     const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
     root.setAttribute("data-theme", next);
     localStorage.setItem("5ai-theme", next);
   };
+
+  window.matchMedia("(prefers-color-scheme:dark)").addEventListener("change", function (e) {
+    if (!localStorage.getItem("5ai-theme")) {
+      root.setAttribute("data-theme", e.matches ? "dark" : "light");
+    }
+  });
 
   /* ---- Mobile nav ---- */
   window.toggleMenu = function () {
