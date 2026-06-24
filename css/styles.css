@@ -137,17 +137,25 @@ h3.sub { font-size: clamp(1.2rem,2vw,1.5rem); }
 .gradient-text {
   background: linear-gradient(110deg, var(--brand), var(--brand-2) 55%, var(--s5));
   -webkit-background-clip: text; background-clip: text; color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 /* Brighter gradient on dark so large headings stay legible */
 @media (prefers-color-scheme: dark) {
   .gradient-text {
     background: linear-gradient(110deg, #a99bff, #c4a3ff 50%, #ff9ec9);
     -webkit-background-clip: text; background-clip: text; color: transparent;
+    background-size: 200% 200%;
   }
 }
 [data-theme="dark"] .gradient-text {
   background: linear-gradient(110deg, #a99bff, #c4a3ff 50%, #ff9ec9);
   -webkit-background-clip: text; background-clip: text; color: transparent;
+  background-size: 200% 200%;
 }
 
 /* ---------- Buttons ---------- */
@@ -521,6 +529,7 @@ input::placeholder, textarea::placeholder { color: var(--faint); opacity: 1; }
 /* ---------- Page hero (sub pages) ---------- */
 .page-hero { padding: clamp(48px,7vw,90px) 0 clamp(30px,4vw,50px); position: relative; overflow: hidden; }
 .page-hero .hero-blob.b1 { width: 360px; height: 360px; top: -140px; right: 0; }
+.page-hero-inner { position: relative; z-index: 1; text-align: left; max-width: 760px; }
 
 /* ---------- Toast ---------- */
 .toast {

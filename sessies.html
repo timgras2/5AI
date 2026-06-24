@@ -118,10 +118,60 @@
           <li>Verbeter de prompt met RACE: bepaal Rol, Actie, Context en Einddoel.</li>
           <li>Vergelijk de nieuwe output met de eerste. Itereer nog een paar keer en noteer wat werkt.</li>
         </ol>
-        <p style="margin-top:14px"><a class="btn btn-ghost" href="volgende-stappen.html#race">Gebruik de RACE-promptbouwer →</a></p>
+        <p style="margin-top:14px"><a class="btn btn-ghost" href="#race">Gebruik de RACE-promptbouwer →</a></p>
       </div>
     </div>
   </article>
+
+  <!-- RACE BUILDER (verplaatst vanaf Volgende stappen) -->
+  <section class="section" id="race" style="padding:40px 0">
+    <div class="wrap">
+      <div class="section-head left reveal">
+        <span class="eyebrow">Interactieve tool</span>
+        <h2 class="title">RACE-promptbouwer</h2>
+        <p class="lead">Vul de vier velden in en zie je prompt live opbouwen. Kies een voorbeeld om snel te starten, en kopieer het resultaat naar je favoriete AI-tool.</p>
+      </div>
+
+      <div class="preset-row reveal">
+        <span style="font-family:var(--font-head);font-size:.85rem;font-weight:600;color:var(--faint);align-self:center;margin-right:4px">VOORBEELDEN:</span>
+        <button class="preset" data-preset="klantenservice">Klantenservice</button>
+        <button class="preset" data-preset="marketing">Marketingtekst</button>
+        <button class="preset" data-preset="analyse">Document-analyse</button>
+        <button class="preset" data-preset="email">E-mail herschrijven</button>
+      </div>
+
+      <div class="race reveal">
+        <div class="race-fields">
+          <div class="field">
+            <label><span class="tag" style="background:var(--s1)">R</span> Rol <span class="hint">— wie moet de AI zijn?</span></label>
+            <textarea id="race-r" rows="2" placeholder="Je bent een ervaren…"></textarea>
+          </div>
+          <div class="field">
+            <label><span class="tag" style="background:var(--s2)">A</span> Actie <span class="hint">— wat moet de AI doen?</span></label>
+            <textarea id="race-a" rows="2" placeholder="Schrijf / analyseer / maak…"></textarea>
+          </div>
+          <div class="field">
+            <label><span class="tag" style="background:var(--s3)">C</span> Context <span class="hint">— wat is de situatie?</span></label>
+            <textarea id="race-c" rows="3" placeholder="Doelgroep, achtergrond, toon, bijlagen…"></textarea>
+          </div>
+          <div class="field">
+            <label><span class="tag" style="background:var(--s4)">E</span> Einddoel <span class="hint">— gewenste output, lengte, format</span></label>
+            <textarea id="race-e" rows="3" placeholder="Bijv. een tabel van max. 150 woorden, zakelijke toon…"></textarea>
+          </div>
+        </div>
+        <div class="race-output">
+          <div class="prompt-out" id="prompt-out"></div>
+          <div class="out-actions">
+            <button class="btn btn-primary" id="copy-prompt">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+              Kopieer prompt</button>
+            <button class="btn btn-ghost" id="clear-prompt">Wissen</button>
+          </div>
+          <p class="muted" style="font-size:.85rem;margin-top:12px">Tip: itereren is essentieel. Krijg je niet het gewenste resultaat? Pas één onderdeel aan en probeer opnieuw.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- SESSIE 2 -->
   <article class="session-detail reveal" id="sessie-2" style="--accent:var(--s2)">
@@ -241,8 +291,8 @@
       </div>
 
       <div class="sd-block" style="margin-top:24px">
-        <h4>🤖 RPA vs. AI-agents + MCP</h4>
-        <p class="muted" style="font-size:.96rem">RPA volgt vaste, voorspelbare regels; AI-agents kunnen redeneren en beslissen. Het <strong>Model Context Protocol (MCP)</strong> is dé verbindende standaard van 2026 die agents veilig toegang geeft tot je tools en data. Veelgebruikte platforms: Zapier, Make, Power Automate, Lindy AI en n8n.</p>
+        <h4>🤖 RPA vs. AI-agents</h4>
+        <p class="muted" style="font-size:.96rem"><strong>RPA</strong> volgt vaste regels — ideaal voor voorspelbare, herhalende taken. <strong>AI-agents</strong> kunnen redeneren en beslissen, ook bij onverwachte situaties. Ze worden veilig verbonden met je bestaande tools via een eenvoudige standaard (MCP). In de praktijk gebruiken ondernemers platforms als Zapier, Make, Power Automate, Lindy AI en n8n.</p>
         <p style="margin-top:12px"><a class="btn btn-ghost" href="tools.html">Vergelijk alle automatiseringstools →</a></p>
       </div>
 
@@ -386,6 +436,7 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/prompt-builder.js"></script>
 <script src="js/calc.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Volgende stappen — 5AI</title>
-<meta name="description" content="Interactieve RACE-promptbouwer en een 30/60/90-dagen-plan dat je voortgang onthoudt. Houd na de cursus het momentum vast." />
+<meta name="description" content="30/60/90-dagen-plan dat je voortgang onthoudt. Houd na de cursus het momentum vast." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -36,60 +36,10 @@
 
 <section class="page-hero">
   <div class="hero-blob b1"></div>
-  <div class="wrap hero-inner" style="text-align:left;max-width:760px;margin-left:0">
+   <div class="wrap page-hero-inner">
     <span class="eyebrow reveal">Houd het momentum vast</span>
     <h1 class="display reveal d1" style="font-size:clamp(2rem,5vw,3.4rem)">Jouw <span class="gradient-text">vervolgplan</span></h1>
-    <p class="lead reveal d2">De cursus is afgelopen — nu komt het erop aan. Bouw scherpe prompts met de RACE-tool en werk je 30/60/90-dagen-plan af. Je voortgang wordt automatisch op dit apparaat bewaard.</p>
-  </div>
-</section>
-
-<!-- RACE BUILDER -->
-<section class="section" id="race" style="padding-top:30px">
-  <div class="wrap">
-    <div class="section-head left reveal">
-      <span class="eyebrow">Interactieve tool</span>
-      <h2 class="title">RACE-promptbouwer</h2>
-      <p class="lead">Vul de vier velden in en zie je prompt live opbouwen. Kies een voorbeeld om snel te starten, en kopieer het resultaat naar je favoriete AI-tool.</p>
-    </div>
-
-    <div class="preset-row reveal">
-      <span style="font-family:var(--font-head);font-size:.85rem;font-weight:600;color:var(--faint);align-self:center;margin-right:4px">VOORBEELDEN:</span>
-      <button class="preset" data-preset="klantenservice">Klantenservice</button>
-      <button class="preset" data-preset="marketing">Marketingtekst</button>
-      <button class="preset" data-preset="analyse">Document-analyse</button>
-      <button class="preset" data-preset="email">E-mail herschrijven</button>
-    </div>
-
-    <div class="race reveal">
-      <div class="race-fields">
-        <div class="field">
-          <label><span class="tag" style="background:var(--s1)">R</span> Rol <span class="hint">— wie moet de AI zijn?</span></label>
-          <textarea id="race-r" rows="2" placeholder="Je bent een ervaren…"></textarea>
-        </div>
-        <div class="field">
-          <label><span class="tag" style="background:var(--s2)">A</span> Actie <span class="hint">— wat moet de AI doen?</span></label>
-          <textarea id="race-a" rows="2" placeholder="Schrijf / analyseer / maak…"></textarea>
-        </div>
-        <div class="field">
-          <label><span class="tag" style="background:var(--s3)">C</span> Context <span class="hint">— wat is de situatie?</span></label>
-          <textarea id="race-c" rows="3" placeholder="Doelgroep, achtergrond, toon, bijlagen…"></textarea>
-        </div>
-        <div class="field">
-          <label><span class="tag" style="background:var(--s4)">E</span> Einddoel <span class="hint">— gewenste output, lengte, format</span></label>
-          <textarea id="race-e" rows="3" placeholder="Bijv. een tabel van max. 150 woorden, zakelijke toon…"></textarea>
-        </div>
-      </div>
-      <div class="race-output">
-        <div class="prompt-out" id="prompt-out"></div>
-        <div class="out-actions">
-          <button class="btn btn-primary" id="copy-prompt">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-            Kopieer prompt</button>
-          <button class="btn btn-ghost" id="clear-prompt">Wissen</button>
-        </div>
-        <p class="muted" style="font-size:.85rem;margin-top:12px">Tip: itereren is essentieel. Krijg je niet het gewenste resultaat? Pas één onderdeel aan en probeer opnieuw.</p>
-      </div>
-    </div>
+    <p class="lead reveal d2">De cursus is afgelopen — nu komt het erop aan. Werk je 30/60/90-dagen-plan af en houd je voortgang bij. Je voortgang wordt automatisch op dit apparaat bewaard.</p>
   </div>
 </section>
 
@@ -130,7 +80,7 @@
     <div class="accordion reveal">
       <div class="acc-item">
         <button class="acc-q">Waar begin ik als ik weinig tijd heb? <span class="pl">+</span></button>
-        <div class="acc-a"><div class="acc-a-inner">Kies één AI-assistent en één terugkerende taak. Gebruik de RACE-bouwer hierboven om er een scherpe prompt voor te maken. Tien minuten per dag, consequent, levert meer op dan af en toe een uur.</div></div>
+        <div class="acc-a"><div class="acc-a-inner">Kies één AI-assistent en één terugkerende taak. Gebruik de <a href="sessies.html#race" style="color:var(--brand)">RACE-promptbouwer</a> op de Sessies-pagina om er een scherpe prompt voor te maken. Tien minuten per dag, consequent, levert meer op dan af en toe een uur.</div></div>
       </div>
       <div class="acc-item">
         <button class="acc-q">Welke tool moet ik kiezen? <span class="pl">+</span></button>
@@ -181,7 +131,6 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script src="js/prompt-builder.js"></script>
 <script src="js/tracker.js"></script>
 </body>
 </html>
