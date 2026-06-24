@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sessies — 5AI</title>
+<meta name="description" content="Samenvattingen van alle vijf sessies: Verkennen, Uitbreiden, Automatiseren, Bouwen en Meten — met frameworks en oefeningen." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('5ai-theme')||'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="logo">5</span> 5AI<span style="color:var(--faint);font-weight:500"> · in 5 stappen</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Overzicht</a>
+      <a href="sessies.html">Sessies</a>
+      <a href="tools.html">Tools 2026</a>
+      <a href="volgende-stappen.html">Volgende stappen</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Wissel thema">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero-blob b1"></div>
+  <div class="wrap hero-inner" style="text-align:left;max-width:760px;margin-left:0">
+    <span class="eyebrow reveal">De vijf sessies</span>
+    <h1 class="display reveal d1" style="font-size:clamp(2rem,5vw,3.4rem)">Alles uit de cursus,<br><span class="gradient-text">overzichtelijk samengevat</span></h1>
+    <p class="lead reveal d2">Elke sessie bouwt voort op de vorige: van je eerste prompt tot het meten van echte bedrijfswaarde. Klik op een stap om door te springen.</p>
+  </div>
+</section>
+
+<!-- QUICK NAV -->
+<section class="wrap reveal" style="margin-bottom:10px">
+  <div class="chip-row" style="justify-content:center">
+    <a class="chip" href="#sessie-1" style="border-color:var(--s1);color:var(--s1)">1 · Verkennen</a>
+    <a class="chip" href="#sessie-2" style="border-color:var(--s2);color:var(--s2)">2 · Uitbreiden</a>
+    <a class="chip" href="#sessie-3" style="border-color:var(--s3);color:var(--s3)">3 · Automatiseren</a>
+    <a class="chip" href="#sessie-4" style="border-color:var(--s4);color:var(--s4)">4 · Bouwen</a>
+    <a class="chip" href="#sessie-5" style="border-color:var(--s5);color:var(--s5)">5 · Meten</a>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px">
+  <div class="wrap">
+
+  <!-- SESSIE 1 -->
+  <article class="session-detail reveal" id="sessie-1" style="--accent:var(--s1)">
+    <div class="sd-header" style="background:linear-gradient(120deg,var(--s1),#60a5fa)">
+      <div><div class="k">Sessie 1</div><h3>Verkennen</h3></div>
+      <div class="big-num">01</div>
+    </div>
+    <div class="sd-body">
+      <p class="sd-intro">Ontdek de kracht van generatieve AI en leer hoe AI-tools jouw bedrijf kunnen ondersteunen. Experimenteer met eenvoudige technieken en ontdek hoe je repetitieve taken sneller uitvoert. Een praktische start voor elke ondernemer.</p>
+      <div class="sd-grid">
+        <div class="sd-block">
+          <h4>🧠 Wat is AI?</h4>
+          <ul class="sd-list">
+            <li><strong>Artificial Intelligence</strong> — systemen die taken doen waarvoor normaal menselijke intelligentie nodig is: leren, redeneren, problemen oplossen.</li>
+            <li><strong>Machine Learning</strong> — leert patronen uit data, zonder expliciete programmering.</li>
+            <li><strong>Deep Learning</strong> — patroonherkenning via neurale netwerken.</li>
+            <li><strong>Generatieve AI</strong> — maakt nieuwe content: tekst, afbeeldingen, video en code.</li>
+          </ul>
+          <h4 style="margin-top:22px">✍️ Prompting: de taal van AI</h4>
+          <p class="muted" style="font-size:.96rem;margin-bottom:8px">Van vaag ("Vat dit artikel samen") naar gestructureerd. De formule:</p>
+          <ul class="sd-list">
+            <li><strong>Rol/context</strong> — "Je bent een [type expert]…"</li>
+            <li><strong>Taak</strong> — maak / schrijf / analyseer…</li>
+            <li><strong>Specificaties</strong> — lengte, doelgroep, toon, format</li>
+            <li><strong>Beperkingen</strong> — wat wel/niet opnemen</li>
+            <li><strong>Output format</strong> — hoe je het resultaat wilt</li>
+          </ul>
+        </div>
+        <div class="sd-block">
+          <h4>🛠️ Welke tool kies ik?</h4>
+          <ul class="sd-list">
+            <li><strong>ChatGPT</strong> — meest gebruikt, custom GPTs, productgericht.</li>
+            <li><strong>Claude</strong> — focus op veiligheid, lange context, artifacts.</li>
+            <li><strong>Gemini</strong> — Google-integratie, zeer snelle modellen.</li>
+            <li><strong>Copilot</strong> — MS 365-integratie, sterke Office-tools.</li>
+            <li><strong>Perplexity</strong> — actuele resultaten, goede bronvermelding.</li>
+          </ul>
+          <div class="callout" style="margin-top:18px"><strong>Kernidee:</strong> er is geen "beste" tool — experimenteer en kies wat bij jóu past. Goede prompts maken het verschil, niet de tool.</div>
+        </div>
+      </div>
+
+      <div class="sd-block" style="margin-top:24px">
+        <h4>🏁 Het RACE-framework</h4>
+        <p class="muted" style="font-size:.97rem">De rode draad door de hele cursus. Vier bouwstenen voor elke goede prompt:</p>
+        <div class="grid grid-2" style="margin-top:14px;gap:14px">
+          <div class="callout" style="border-color:var(--s1)"><strong>R — Rol:</strong> welke rol moet de AI aannemen?</div>
+          <div class="callout" style="border-color:var(--s1)"><strong>A — Actie:</strong> wat moet de AI doen?</div>
+          <div class="callout" style="border-color:var(--s1)"><strong>C — Context:</strong> wat is de situatie of achtergrond?</div>
+          <div class="callout" style="border-color:var(--s1)"><strong>E — Einddoel:</strong> wat wil je bereiken met het resultaat?</div>
+        </div>
+      </div>
+
+      <div class="exercise">
+        <span class="ex-tag">⚡ Oefening</span>
+        <h4>Aan de slag: van vage naar scherpe prompt</h4>
+        <p class="muted">Kies een simpele, terugkerende taak (een e-mail, marketingtekst of productbeschrijving).</p>
+        <ol>
+          <li>Beschrijf de taak in je eigen woorden en voer 'm in bij een AI-tool. Is de output bruikbaar? Wat ontbreekt?</li>
+          <li>Verbeter de prompt met RACE: bepaal Rol, Actie, Context en Einddoel.</li>
+          <li>Vergelijk de nieuwe output met de eerste. Itereer nog een paar keer en noteer wat werkt.</li>
+        </ol>
+        <p style="margin-top:14px"><a class="btn btn-ghost" href="volgende-stappen.html#race">Gebruik de RACE-promptbouwer →</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- SESSIE 2 -->
+  <article class="session-detail reveal" id="sessie-2" style="--accent:var(--s2)">
+    <div class="sd-header" style="background:linear-gradient(120deg,var(--s2),#a78bfa)">
+      <div><div class="k">Sessie 2</div><h3>Uitbreiden</h3></div>
+      <div class="big-num">02</div>
+    </div>
+    <div class="sd-body">
+      <p class="sd-intro">Breid generatieve AI uit naar een krachtig systeem dat meerdere stappen en rollen verbindt. AI-ketens vormen de basis: een methode om losse prompts om te zetten in samenhangende workflows die je bedrijfsprocessen stroomlijnen.</p>
+      <div class="sd-grid">
+        <div class="sd-block">
+          <h4>🎨 Multimodaal: meer dan tekst</h4>
+          <p class="muted" style="font-size:.96rem;margin-bottom:10px">Een AI-model dat meerdere soorten informatie tegelijk begrijpt en combineert — tekst, beeld, audio, video, code en documenten.</p>
+          <ul class="sd-list">
+            <li>Een foto analyseren en gestructureerd presenteren</li>
+            <li>Een PDF lezen en gegevens eruit halen</li>
+            <li>Een audiofragment omzetten naar een samenvatting</li>
+            <li>Een screenshot begrijpen en advies geven</li>
+            <li>Diagrammen, tabellen of dashboards interpreteren</li>
+          </ul>
+          <div class="callout" style="margin-top:16px;border-color:var(--s2)"><strong>Voorbeeld uit de cursus:</strong> een orderbevestiging laten analyseren op gemiddelde korting, top-3 spendregels en totale besparing — en de uitkomst in een nette tabel of als valide JSON voor import in je systeem.</div>
+        </div>
+        <div class="sd-block">
+          <h4>🔗 AI-ketens</h4>
+          <p class="muted" style="font-size:.96rem;margin-bottom:10px">Een reeks slimme, opeenvolgende AI-stappen die samen een compleet proces uitvoeren.</p>
+          <ul class="sd-list">
+            <li><strong>Voortbouwen:</strong> elke stap gebruikt de output van de vorige.</li>
+            <li><strong>Geen complexe systemen:</strong> tools werken samen via goede prompts.</li>
+            <li><strong>Flexibel:</strong> pas één stap aan zonder de hele keten te herbouwen.</li>
+            <li><strong>Efficiënt:</strong> consistente resultaten, sneller werken.</li>
+          </ul>
+          <p class="muted" style="font-size:.9rem;margin-top:12px">Voorbeeldketen: meeting notes → offerte → e-mails → CRM (JSON).</p>
+        </div>
+      </div>
+
+      <div class="sd-block" style="margin-top:24px">
+        <h4>📁 Projects & Agents</h4>
+        <div class="grid grid-2" style="margin-top:12px;gap:14px">
+          <div class="callout" style="border-color:var(--s2)"><strong>Projects:</strong> georganiseerde werkruimten waarin je documenten uploadt, instructies geeft en meerdere gesprekken voert — de AI onthoudt alle context.</div>
+          <div class="callout" style="border-color:var(--s2)"><strong>Agents:</strong> gespecialiseerde AI-assistenten voor specifieke taken. Je beschrijft in gewone taal wat je nodig hebt; de agent voert het automatisch uit.</div>
+        </div>
+        <p class="muted" style="font-size:.9rem;margin-top:12px">In de praktijk: ChatGPT (Projects, Custom GPTs), Claude (Projects, Artifacts), Gemini (Gems), Copilot &amp; Mistral (Agents).</p>
+      </div>
+
+      <div class="exercise">
+        <span class="ex-tag">⚡ Oefening</span>
+        <h4>Kies een proces en bouw je eerste agent of project</h4>
+        <ol>
+          <li>Kies een proces uit je bedrijf dat je efficiënter wilt maken. Bepaal de afzonderlijke stappen en welke gegevens je per stap nodig hebt.</li>
+          <li>Bepaal waar AI waarde toevoegt — denk ook aan kleine verbeteringen, niet alleen volledige automatisering.</li>
+          <li>Kies: leent dit zich beter voor een <em>project</em> of een <em>agent</em>? Bouw een eerste eenvoudige versie.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <!-- SESSIE 3 -->
+  <article class="session-detail reveal" id="sessie-3" style="--accent:var(--s3)">
+    <div class="sd-header" style="background:linear-gradient(120deg,var(--s3),#2dd4bf)">
+      <div><div class="k">Sessie 3</div><h3>Automatiseren</h3></div>
+      <div class="big-num">03</div>
+    </div>
+    <div class="sd-body">
+      <p class="sd-intro">Zet automatisering in, ondersteund door AI, om repetitieve taken slimmer en efficiënter te maken. Door generatieve AI te combineren met automatisering zet je handmatige processen om in geoptimaliseerde workflows — je bespaart tijd en behaalt betere resultaten.</p>
+      <div class="sd-grid">
+        <div class="sd-block">
+          <h4>⚖️ Waarom automatiseren?</h4>
+          <p class="muted" style="font-size:.92rem;font-weight:600;margin-bottom:6px">Voordelen</p>
+          <ul class="sd-list">
+            <li>Tijdsbesparing op repetitieve taken</li>
+            <li>Consistentie: voorspelbare, foutloze resultaten</li>
+            <li>Schaalbaarheid: meer werk met dezelfde mensen</li>
+          </ul>
+          <p class="muted" style="font-size:.92rem;font-weight:600;margin:14px 0 6px">Nadelen</p>
+          <ul class="sd-list">
+            <li>Complexiteit: meer automatisering = ingewikkelder</li>
+            <li>Afhankelijkheid van tools en integraties</li>
+            <li>Kosten van geavanceerde systemen</li>
+          </ul>
+        </div>
+        <div class="sd-block">
+          <h4>🧭 Automatiseer-assessment</h4>
+          <p class="muted" style="font-size:.96rem;margin-bottom:10px">Stel jezelf deze vragen vóór je automatiseert:</p>
+          <ul class="sd-list">
+            <li>Doe ik deze taak vaak, of maar af en toe?</li>
+            <li>Vind ik het leuk, of zou ik het uitbesteden?</li>
+            <li>Is de taak simpel, of kost het veel moeite?</li>
+            <li>Kan ik de stappen makkelijk uitleggen?</li>
+            <li>Zijn de stappen altijd hetzelfde?</li>
+            <li>Hoe belangrijk is mijn menselijk oordeel?</li>
+            <li>Wanneer is de taak 'goed afgerond'?</li>
+            <li>Wat is het risico als het misgaat?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sd-block" style="margin-top:24px">
+        <h4>📶 Automatiseren in drie niveaus</h4>
+        <div class="grid grid-3" style="margin-top:14px;gap:14px">
+          <div class="card" style="padding:22px;box-shadow:none">
+            <div class="chip" style="border-color:var(--s3);color:var(--s3)">Niveau 1 · ●○○○○</div>
+            <h3 style="font-size:1.05rem;margin:10px 0 6px">Simpele taken</h3>
+            <p style="font-size:.92rem">Taakfunctionaliteit in ChatGPT en eenvoudige connectors (bijv. AI met je agenda).</p>
+          </div>
+          <div class="card" style="padding:22px;box-shadow:none">
+            <div class="chip" style="border-color:var(--s1);color:var(--s1)">Niveau 2 · ●●●○○</div>
+            <h3 style="font-size:1.05rem;margin:10px 0 6px">Workflows verbinden</h3>
+            <p style="font-size:.92rem">Automation-tools die systemen koppelen, meerdere agents combineren en data uitwisselen.</p>
+          </div>
+          <div class="card" style="padding:22px;box-shadow:none">
+            <div class="chip" style="border-color:var(--s2);color:var(--s2)">Niveau 3 · ●●●●●</div>
+            <h3 style="font-size:1.05rem;margin:10px 0 6px">Geavanceerde integraties</h3>
+            <p style="font-size:.92rem">Custom integraties met API's, autonome workflows en beslissingslogica.</p>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:18px;border-color:var(--s3)"><strong>De balans:</strong> hoe hoger de mate van automatisering, hoe meer complexiteit — en hoe minder directe menselijke betrokkenheid. Zoek het juiste evenwicht per taak.</div>
+      </div>
+
+      <div class="sd-block" style="margin-top:24px">
+        <h4>🤖 RPA vs. AI-agents + MCP</h4>
+        <p class="muted" style="font-size:.96rem">RPA volgt vaste, voorspelbare regels; AI-agents kunnen redeneren en beslissen. Het <strong>Model Context Protocol (MCP)</strong> is dé verbindende standaard van 2026 die agents veilig toegang geeft tot je tools en data. Veelgebruikte platforms: Zapier, Make, Power Automate, Lindy AI en n8n.</p>
+        <p style="margin-top:12px"><a class="btn btn-ghost" href="tools.html">Vergelijk alle automatiseringstools →</a></p>
+      </div>
+
+      <div class="calc-wrap" style="margin-top:24px">
+        <h4 style="display:flex;align-items:center;gap:8px;font-size:1.1rem;margin-bottom:6px">🧮 Automatiseer-readiness calculator</h4>
+        <p class="muted" style="font-size:.96rem;margin-bottom:16px">Denk aan een concrete taak en vink aan wat klopt. Je ziet direct of de taak geschikt is om te automatiseren en welk niveau past.</p>
+        <div id="calc"></div>
+      </div>
+
+      <div class="exercise">
+        <span class="ex-tag">⚡ Oefening</span>
+        <h4>Kies een proces en bepaal het automatiseringsniveau</h4>
+        <ol>
+          <li>Kies een proces dat je wilt verbeteren en splits het op in losse stappen.</li>
+          <li>Loop de 8 assessment-vragen langs. Welke stappen lenen zich voor automatisering en welke hebben menselijk oordeel nodig?</li>
+          <li>Bepaal per stap het niveau (1, 2 of 3) en kies een passende tool om mee te starten.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <!-- SESSIE 4 -->
+  <article class="session-detail reveal" id="sessie-4" style="--accent:var(--s4)">
+    <div class="sd-header" style="background:linear-gradient(120deg,var(--s4),#fbbf24)">
+      <div><div class="k">Sessie 4</div><h3>Bouwen</h3></div>
+      <div class="big-num">04</div>
+    </div>
+    <div class="sd-body">
+      <p class="sd-intro">In deze sessie gaan we dieper in op het bouwen van software met AI — ook wel <strong>vibecoding</strong> genoemd. Ontdek hoe je zonder technische kennis tóch digitale tools maakt waar jij behoefte aan hebt. Met AI zet je ideeën snel om in werkende programma's die je daarna verder uitbreidt: sneller, goedkoper en praktischer.</p>
+      <div class="sd-grid">
+        <div class="sd-block">
+          <h4>💡 Wat is vibecoden?</h4>
+          <p class="muted" style="font-size:.96rem;margin-bottom:10px">Je beschrijft in gewone taal wat je wilt, en de AI schrijft de code en bouwt een werkende app. Je stuurt bij door te beschrijven wat anders moet — niet door zelf te programmeren.</p>
+          <ul class="sd-list">
+            <li><strong>Begin klein:</strong> één scherm, één functie die werkt.</li>
+            <li><strong>Itereer in stappen:</strong> bouw uit op wat al werkt.</li>
+            <li><strong>Van idee naar prototype</strong> in minuten in plaats van weken.</li>
+            <li><strong>Test direct</strong> met echte gebruikers en pas aan.</li>
+          </ul>
+        </div>
+        <div class="sd-block">
+          <h4>🧰 Tools voor vibecoding (2026)</h4>
+          <ul class="sd-list">
+            <li><strong>Lovable</strong> — beste startpunt voor niet-technische bouwers; nette code + database.</li>
+            <li><strong>Bolt.new</strong> — snel prototypen in je browser, veel frameworks.</li>
+            <li><strong>v0</strong> — mooie interfaces en losse UI-componenten.</li>
+            <li><strong>Replit Agent</strong> — code, database, hosting en deploy in één.</li>
+            <li><strong>Claude artifacts</strong> — bouw werkende tools direct in een gesprek.</li>
+            <li><strong>Cursor</strong> — voor wie al wat programmeert: AI-pair-programmer.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:20px;border-color:var(--s4)"><strong>Belangrijk:</strong> behandel een vibecode-app eerst als prototype. Werkt het en levert het waarde? Pas dan investeer je in robuustheid, beveiliging en onderhoud.</div>
+
+      <div class="exercise">
+        <span class="ex-tag">⚡ Oefening</span>
+        <h4>Bouw je eerste mini-tool</h4>
+        <ol>
+          <li>Kies een klein, concreet idee: een rekentool, een checklist-app of een formulier dat e-mails opstelt.</li>
+          <li>Beschrijf het in één alinea (gebruik RACE) en laat een vibecoding-tool een eerste versie bouwen.</li>
+          <li>Test het, beschrijf één verbetering per keer en herhaal tot het bruikbaar is.</li>
+        </ol>
+        <p style="margin-top:14px"><a class="btn btn-ghost" href="tools.html#explorer">Bekijk de app-bouwers →</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- SESSIE 5 -->
+  <article class="session-detail reveal" id="sessie-5" style="--accent:var(--s5)">
+    <div class="sd-header" style="background:linear-gradient(120deg,var(--s5),#f472b6)">
+      <div><div class="k">Sessie 5</div><h3>Meten</h3></div>
+      <div class="big-num">05</div>
+    </div>
+    <div class="sd-body">
+      <p class="sd-intro">De laatste stap maakt de cirkel rond: meten of het écht werkt. Kies een doel, bepaal je KPI's en maak de waarde van AI zichtbaar — voor jezelf en voor je organisatie. Want zonder meten blijft AI een experiment; mét meten wordt het een investering.</p>
+      <div class="sd-grid">
+        <div class="sd-block">
+          <h4>🎯 Bepaal je succes</h4>
+          <p class="muted" style="font-size:.96rem;margin-bottom:10px">Slechts ~25% van de bedrijven haalt nu al echte waarde uit AI. Het verschil zit in meten en concrete doelen. Kies KPI's die passen bij je use-case:</p>
+          <ul class="sd-list">
+            <li><strong>Tijd:</strong> bespaarde uren per week, kortere doorlooptijd.</li>
+            <li><strong>Kwaliteit:</strong> minder fouten, hogere consistentie.</li>
+            <li><strong>Volume:</strong> meer output met dezelfde bezetting.</li>
+            <li><strong>Tevredenheid:</strong> klant- of medewerkerstevredenheid.</li>
+            <li><strong>Omzet/kosten:</strong> directe euro's bespaard of verdiend.</li>
+          </ul>
+        </div>
+        <div class="sd-block">
+          <h4>📊 Maak waarde zichtbaar</h4>
+          <ul class="sd-list">
+            <li><strong>Nulmeting:</strong> leg vast hoe lang/duur een taak nú is.</li>
+            <li><strong>Meet opnieuw</strong> met AI en vergelijk de cijfers.</li>
+            <li><strong>Mini-businesscase</strong> op één A4: probleem, oplossing, resultaat.</li>
+            <li><strong>Deel het resultaat</strong> — concrete cijfers overtuigen en versnellen adoptie.</li>
+          </ul>
+          <div class="callout" style="margin-top:16px;border-color:var(--s5)"><strong>De cyclus herhaalt:</strong> meten levert je volgende use-case op. Verkennen → Uitbreiden → Automatiseren → Bouwen → Meten, en weer opnieuw.</div>
+        </div>
+      </div>
+
+      <div class="exercise">
+        <span class="ex-tag">⚡ Oefening</span>
+        <h4>Maak je eerste mini-businesscase</h4>
+        <ol>
+          <li>Kies je belangrijkste AI-use-case en bepaal de KPI die er het meest toe doet.</li>
+          <li>Noteer de nulmeting (zonder AI) en de meting mét AI. Bereken het verschil.</li>
+          <li>Vat het samen op één A4 en kies je volgende taak om de cyclus te herhalen.</li>
+        </ol>
+        <p style="margin-top:14px"><a class="btn btn-ghost" href="volgende-stappen.html">Naar je 30/60/90-dagen-plan →</a></p>
+      </div>
+    </div>
+  </article>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-band" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <h2>Van samenvatting naar actie</h2>
+      <p>Je kent nu de hele methode. Zet 'm om in een concreet plan en houd je voortgang bij.</p>
+      <a class="btn btn-white" href="volgende-stappen.html">Start je vervolgplan
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <div class="brand" style="margin-bottom:6px"><span class="logo">5</span> 5AI</div>
+      <p class="muted">Aan de slag met AI in 5 stappen · © Tim Grasmaijer</p>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Overzicht</a>
+      <a href="tools.html">Tools 2026</a>
+      <a href="volgende-stappen.html">Volgende stappen</a>
+      <a href="https://timgras.com" target="_blank" rel="noopener">timgras.com</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/calc.js"></script>
+</body>
+</html>

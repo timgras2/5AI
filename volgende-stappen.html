@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Volgende stappen — 5AI</title>
+<meta name="description" content="Interactieve RACE-promptbouwer en een 30/60/90-dagen-plan dat je voortgang onthoudt. Houd na de cursus het momentum vast." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('5ai-theme')||'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="logo">5</span> 5AI<span style="color:var(--faint);font-weight:500"> · in 5 stappen</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Overzicht</a>
+      <a href="sessies.html">Sessies</a>
+      <a href="tools.html">Tools 2026</a>
+      <a href="volgende-stappen.html">Volgende stappen</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Wissel thema">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="hero-blob b1"></div>
+  <div class="wrap hero-inner" style="text-align:left;max-width:760px;margin-left:0">
+    <span class="eyebrow reveal">Houd het momentum vast</span>
+    <h1 class="display reveal d1" style="font-size:clamp(2rem,5vw,3.4rem)">Jouw <span class="gradient-text">vervolgplan</span></h1>
+    <p class="lead reveal d2">De cursus is afgelopen — nu komt het erop aan. Bouw scherpe prompts met de RACE-tool en werk je 30/60/90-dagen-plan af. Je voortgang wordt automatisch op dit apparaat bewaard.</p>
+  </div>
+</section>
+
+<!-- RACE BUILDER -->
+<section class="section" id="race" style="padding-top:30px">
+  <div class="wrap">
+    <div class="section-head left reveal">
+      <span class="eyebrow">Interactieve tool</span>
+      <h2 class="title">RACE-promptbouwer</h2>
+      <p class="lead">Vul de vier velden in en zie je prompt live opbouwen. Kies een voorbeeld om snel te starten, en kopieer het resultaat naar je favoriete AI-tool.</p>
+    </div>
+
+    <div class="preset-row reveal">
+      <span style="font-family:var(--font-head);font-size:.85rem;font-weight:600;color:var(--faint);align-self:center;margin-right:4px">VOORBEELDEN:</span>
+      <button class="preset" data-preset="klantenservice">Klantenservice</button>
+      <button class="preset" data-preset="marketing">Marketingtekst</button>
+      <button class="preset" data-preset="analyse">Document-analyse</button>
+      <button class="preset" data-preset="email">E-mail herschrijven</button>
+    </div>
+
+    <div class="race reveal">
+      <div class="race-fields">
+        <div class="field">
+          <label><span class="tag" style="background:var(--s1)">R</span> Rol <span class="hint">— wie moet de AI zijn?</span></label>
+          <textarea id="race-r" rows="2" placeholder="Je bent een ervaren…"></textarea>
+        </div>
+        <div class="field">
+          <label><span class="tag" style="background:var(--s2)">A</span> Actie <span class="hint">— wat moet de AI doen?</span></label>
+          <textarea id="race-a" rows="2" placeholder="Schrijf / analyseer / maak…"></textarea>
+        </div>
+        <div class="field">
+          <label><span class="tag" style="background:var(--s3)">C</span> Context <span class="hint">— wat is de situatie?</span></label>
+          <textarea id="race-c" rows="3" placeholder="Doelgroep, achtergrond, toon, bijlagen…"></textarea>
+        </div>
+        <div class="field">
+          <label><span class="tag" style="background:var(--s4)">E</span> Einddoel <span class="hint">— gewenste output, lengte, format</span></label>
+          <textarea id="race-e" rows="3" placeholder="Bijv. een tabel van max. 150 woorden, zakelijke toon…"></textarea>
+        </div>
+      </div>
+      <div class="race-output">
+        <div class="prompt-out" id="prompt-out"></div>
+        <div class="out-actions">
+          <button class="btn btn-primary" id="copy-prompt">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            Kopieer prompt</button>
+          <button class="btn btn-ghost" id="clear-prompt">Wissen</button>
+        </div>
+        <p class="muted" style="font-size:.85rem;margin-top:12px">Tip: itereren is essentieel. Krijg je niet het gewenste resultaat? Pas één onderdeel aan en probeer opnieuw.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKER -->
+<section class="section" id="plan" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head left reveal">
+      <span class="eyebrow">Jouw routekaart</span>
+      <h2 class="title">30 / 60 / 90 dagen</h2>
+      <p class="lead">Een concreet plan om de cursus om te zetten in resultaat. Vink stappen af — je voortgang blijft bewaard, ook als je later terugkomt.</p>
+    </div>
+
+    <div class="progress-wrap reveal">
+      <div class="progress-top">
+        <div>
+          <h3>Mijn voortgang</h3>
+          <p class="muted" id="track-sub" style="font-size:.9rem">0 van 15 stappen afgerond</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px">
+          <span class="progress-pct" id="track-pct">0%</span>
+          <button class="reset-btn" id="track-reset">Reset</button>
+        </div>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="track-fill"></div></div>
+    </div>
+
+    <div id="tracker"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap" style="max-width:820px">
+    <div class="section-head reveal">
+      <span class="eyebrow">Veelgestelde vragen</span>
+      <h2 class="title">Nog even dit</h2>
+    </div>
+    <div class="accordion reveal">
+      <div class="acc-item">
+        <button class="acc-q">Waar begin ik als ik weinig tijd heb? <span class="pl">+</span></button>
+        <div class="acc-a"><div class="acc-a-inner">Kies één AI-assistent en één terugkerende taak. Gebruik de RACE-bouwer hierboven om er een scherpe prompt voor te maken. Tien minuten per dag, consequent, levert meer op dan af en toe een uur.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q">Welke tool moet ik kiezen? <span class="pl">+</span></button>
+        <div class="acc-a"><div class="acc-a-inner">Er is geen universeel beste tool. Draait je werk op Microsoft 365? Begin met Copilot. Werk je veel met lange documenten? Claude. Veel research? Perplexity. Bekijk de <a href="tools.html" style="color:var(--brand)">Tools 2026</a>-pagina en filter op jouw niveau.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q">Moet ik kunnen programmeren om iets te bouwen? <span class="pl">+</span></button>
+        <div class="acc-a"><div class="acc-a-inner">Nee. Met vibecoding (sessie 4) beschrijf je in gewone taal wat je wilt en bouwt de AI het. Tools als Lovable of Claude artifacts zijn ontworpen voor niet-technische gebruikers.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q">Hoe overtuig ik mijn team of leidinggevende? <span class="pl">+</span></button>
+        <div class="acc-a"><div class="acc-a-inner">Met cijfers. Doe een nulmeting, meet opnieuw mét AI en vat het verschil samen in een mini-businesscase op één A4 (zie sessie 5). Concrete tijdsbesparing overtuigt sneller dan theorie.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q">Wat doe ik met data en privacy? <span class="pl">+</span></button>
+        <div class="acc-a"><div class="acc-a-inner">Deel geen gevoelige of persoonsgegevens in gratis consumentenversies. Gebruik zakelijke abonnementen met duidelijke verwerkersafspraken, en check het databeleid van elke tool voordat je 'm in een werkproces zet.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-band" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <h2>Blijf bouwen</h2>
+      <p>Elke afgevinkte stap is vooruitgang. Kom gerust terug naar deze pagina — je plan staat klaar.</p>
+      <div class="hero-cta" style="margin-top:0">
+        <a class="btn btn-white" href="sessies.html">Lees de sessies terug</a>
+        <a class="btn btn-ghost" href="tools.html">Verken de tools</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <div class="brand" style="margin-bottom:6px"><span class="logo">5</span> 5AI</div>
+      <p class="muted">Aan de slag met AI in 5 stappen · © Tim Grasmaijer</p>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Overzicht</a>
+      <a href="sessies.html">Sessies</a>
+      <a href="tools.html">Tools 2026</a>
+      <a href="https://timgras.com" target="_blank" rel="noopener">timgras.com</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/prompt-builder.js"></script>
+<script src="js/tracker.js"></script>
+</body>
+</html>
